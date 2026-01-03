@@ -14,7 +14,29 @@ To write a Python program that demonstrates class inheritance by creating a pare
 7. Output will demonstrate method overriding: printing `"fish"` and `"shark"` accordingly.
 
 ## 💻 PROGRAM:
+```
+class ECE:
+    def __init__(self, value):
+        self.value = value
 
+    # Overloading * operator to multiply values
+    def __mul__(self, other):
+        return self.value * other.value
+
+
+# Creating objects
+obj1 = ECE(4)
+obj2 = ECE(3)
+
+# Multiplying objects
+result = obj1 * obj2
+print(result)
+
+# Printing "parrot" exactly 3 times
+print("parrot" * 3)
+```
 ## OUTPUT
+<img width="688" height="231" alt="image" src="https://github.com/user-attachments/assets/02d8f0fa-c727-4ca4-8f77-20cf2fbd0a72" />
 
 ## RESULT
+Executed Successfully.
