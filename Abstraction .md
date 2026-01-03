@@ -29,7 +29,49 @@ To create an **abstract class** named `Shape` with an **abstract method** `calcu
 ---
 
 ## 💻 Program
+```
+from abc import ABC, abstractmethod
 
+# Abstract Base Class
+class educlass(ABC):
+    def __init__(self, value):
+        self.value = value
+
+    # Abstract method
+    @abstractmethod
+    def course(self):
+        pass
+
+    # Normal method visible to user
+    def print_value(self):
+        print(f"The value is:  {self.value}")
+
+# Subclass Demo
+class Demo(educlass):
+    def course(self):
+        print("This is demo class")
+        self.print_value()
+
+# Subclass Learn
+class Learn(educlass):
+    def course(self):
+        print("This is test class")
+        self.print_value()
+
+# Creating objects
+t1 = Learn(500)
+ex = Demo(850)
+
+# Invoking course() method
+t1.course()
+ex.course()
+
+# Checking instances
+print(f"t1 is instance of educlass? ", isinstance(t1, educlass))
+print(f"ex is instance of educlass? ", isinstance(ex, educlass))
+```
 ## Output
+<img width="987" height="334" alt="image" src="https://github.com/user-attachments/assets/a415f1a7-71ab-4584-b0d0-51e090c006a0" />
 
 ## Result
+Executed Successfully.
